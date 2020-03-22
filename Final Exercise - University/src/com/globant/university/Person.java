@@ -2,8 +2,15 @@ package com.globant.university;
 
 public class Person {
 
-	String name;
-	double salary;
+	private String name;
 	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}	
 	
 }
