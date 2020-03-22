@@ -1,14 +1,20 @@
 package com.globant.university;
 
 public class Teacher extends Person implements TeacherType{
-	private double salary;
+	
+	private double baseSalary;
+	private double semanalSalary;
 	private boolean isFullTime;
+	private int experienceYears;
 
-	public Teacher(double salary) {
-		super();
-		this.salary = salary;
 
+	public Teacher(boolean isFullTime,int experienceYears) {
+		baseSalary = 1500000;
+		semanalSalary = baseSalary / 4;
+		this.isFullTime = isFullTime;
+		this.experienceYears = experienceYears;
 	}
+
 	public boolean getIsFullTime() {
 		return isFullTime;
 	}
