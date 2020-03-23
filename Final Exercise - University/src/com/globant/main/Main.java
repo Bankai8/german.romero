@@ -6,27 +6,35 @@ import com.globant.university.*;
 
 public class Main {
 	
-private static List<Teacher> teachersList = new ArrayList<Teacher>();
+private static List<FullTimeTeacher> teachersList = new ArrayList<FullTimeTeacher>();
 private static List<Student> studentList = new ArrayList<Student>();
 private static List<Classes> classesList = new ArrayList<Classes>();
 
 	public static void main(String[] args) {
 
-		//Full time teachers
+		//Full time teachers - Parameters (expyears)
 		
-		Teacher tcAndrea = new Teacher(true, 3);
+		FullTimeTeacher tcAndrea = new FullTimeTeacher(5);
 		tcAndrea.setName("Andrea");
+		tcAndrea.calculateSalary();
+		tcAndrea.showTeacherData();
 		
-		Teacher tcLorena = new Teacher(true, 2);
+		FullTimeTeacher tcLorena = new FullTimeTeacher(2);
 		tcLorena.setName("Lorena");
+		tcLorena.calculateSalary();
+		tcLorena.showTeacherData();
 		
-		//Partial time Teachers
+		//Partial time Teachers - Parameters (expyears)
 		
-		Teacher tcMiguel = new Teacher(false, 5);
+		PartialTimeTeacher tcMiguel = new PartialTimeTeacher(6,200);
 		tcMiguel.setName("Miguel");
+		tcMiguel.calculateSalary();
+		tcMiguel.showTeacherData();
 		
-		Teacher tcAnderson = new Teacher(false, 5);
+		PartialTimeTeacher tcAnderson = new PartialTimeTeacher(4,160);
 		tcAnderson.setName("Anderson");
+		tcAnderson.calculateSalary();
+		tcAnderson.showTeacherData();
 		
 		//Students
 		

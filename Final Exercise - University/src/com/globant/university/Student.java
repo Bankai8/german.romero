@@ -1,6 +1,4 @@
-package com.globant.main;
-
-import com.globant.university.Person;
+package com.globant.university;
 
 public class Student extends Person{
 
