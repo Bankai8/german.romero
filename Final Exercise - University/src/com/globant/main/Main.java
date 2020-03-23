@@ -39,11 +39,17 @@ private static List<Classes> classesList = new ArrayList<Classes>();
 		//Students
 		
 		Student stRoberto = new Student("Roberto",1547898741,15);
+		stRoberto.showStudentData();
 		Student stClaudia = new Student("Claudia",54874579,17);
+		stClaudia.showStudentData();
 		Student stAlberto = new Student("Alberto",21478547,16);
+		stAlberto.showStudentData();
 		Student stMartha = new Student("Martha",2014785474,12);
+		stMartha.showStudentData();
 		Student stNydian = new Student("Nydian",54784145,15);
+		stNydian.showStudentData();
 		Student stJorge = new Student("Jorge",1245781111,14);
+		stJorge.showStudentData();
 		
 		//Classes
 		
