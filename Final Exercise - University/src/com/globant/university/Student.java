@@ -7,4 +7,7 @@ public class Student extends Person{
 		setId(id);
 		setAge(age);
 	}
+	public void showStudentData() {
+		System.out.println("Student: "+getName()+"\nId: "+getId()+"\nAge: "+getAge()+"\n");
+	}
 }

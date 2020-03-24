@@ -6,8 +6,6 @@ import com.globant.university.*;
 
 public class Main {
 	
-private static List<FullTimeTeacher> teachersList = new ArrayList<FullTimeTeacher>();
-private static List<Student> studentList = new ArrayList<Student>();
 private static List<Classes> classesList = new ArrayList<Classes>();
 
 	public static void main(String[] args) {
@@ -17,24 +15,20 @@ private static List<Classes> classesList = new ArrayList<Classes>();
 		FullTimeTeacher tcAndrea = new FullTimeTeacher(5);
 		tcAndrea.setName("Andrea");
 		tcAndrea.calculateSalary();
-		tcAndrea.showTeacherData();
 		
 		FullTimeTeacher tcLorena = new FullTimeTeacher(2);
 		tcLorena.setName("Lorena");
 		tcLorena.calculateSalary();
-		tcLorena.showTeacherData();
 		
 		//Partial time Teachers - Parameters (expyears)
 		
 		PartialTimeTeacher tcMiguel = new PartialTimeTeacher(6,200);
 		tcMiguel.setName("Miguel");
 		tcMiguel.calculateSalary();
-		tcMiguel.showTeacherData();
 		
 		PartialTimeTeacher tcAnderson = new PartialTimeTeacher(4,160);
 		tcAnderson.setName("Anderson");
 		tcAnderson.calculateSalary();
-		tcAnderson.showTeacherData();
 		
 		//Students
 		
@@ -47,10 +41,44 @@ private static List<Classes> classesList = new ArrayList<Classes>();
 		
 		//Classes
 		
-		Classes math = new Classes("math");
-		Classes science = new Classes("science");
 		Classes music = new Classes("music");
+		music.addTeacherToClass(tcAndrea);
+		music.addStudentToClass(stRoberto);
+		music.addStudentToClass(stClaudia);
+		music.addStudentToClass(stAlberto);
+		music.addStudentToClass(stMartha);
+		music.addStudentToClass(stNydian);
+		music.addStudentToClass(stJorge);
+		
+		Classes math = new Classes("math");
+		math.addTeacherToClass(tcLorena);
+		math.addStudentToClass(stRoberto);
+		math.addStudentToClass(stClaudia);
+		math.addStudentToClass(stMartha);
+		
+		Classes science = new Classes("science");
+		science.addTeacherToClass(tcMiguel);
+		science.addStudentToClass(stMartha);
+		science.addStudentToClass(stNydian);
+		science.addStudentToClass(stJorge);
+		
 		Classes biology = new Classes("biology");
+		biology.addTeacherToClass(tcAnderson);
+		biology.addStudentToClass(stRoberto);
+		biology.addStudentToClass(stAlberto);
+		biology.addStudentToClass(stMartha);
+		biology.addStudentToClass(stNydian);
+		biology.addStudentToClass(stClaudia);
+		
+		classesList.add(music);
+		classesList.add(math);
+		classesList.add(science);
+		classesList.add(biology);
+		
+		//shows all class data teachers and students
+		for (int i = 0; i < classesList.size(); i++) {
+			classesList.get(i).showClassData();
+		}
 	}
 
 }
